@@ -9,7 +9,7 @@ def main():
 
         while True:
             word = input("Please enter the word you would like to check in the dictionary:\n")
-            if dictionary.meaning(word):
+            if dictionary.meaning(word, disable_errors=True):
                 print("The definition of ", word," is: ")
                 formatted_result =  json.dumps(dictionary.meaning(word), indent=4)
 
